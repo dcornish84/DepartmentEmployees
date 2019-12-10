@@ -51,6 +51,16 @@ namespace DepartmentsEmployees
             Console.WriteLine();
             Console.WriteLine();
 
+            var allEmployeesWithDept = employeeRepo.GetAllEmployeesWithDepartment();
+            Console.WriteLine("Employees with Department");
+            Console.WriteLine("------------------");
+            foreach (var emp in allEmployeesWithDept)
+            {
+                Console.WriteLine(emp.FirstName);
+                Console.WriteLine(emp.LastName);
+                Console.WriteLine(emp.Department);
+            }
+
             var legal = new Department();
             Console.WriteLine("What department would you like to add?");
 
@@ -69,6 +79,10 @@ namespace DepartmentsEmployees
             departmentRepo.DeleteDepartment(7);
             departmentRepo.DeleteDepartment(8);
             departmentRepo.DeleteDepartment(9);
+
+
+            
+
 
 
         }
